@@ -12,11 +12,11 @@ int main() {
   printf("---------\n");
 
   //testing insert_front
-  printf("Adding #s 0-9 to list.\n");
-  printf("Expected: [ 9 8 7 6 5 4 3 2 1 0 ] \n");
-
   struct node *node0;
   node0 = NULL;
+
+  printf("Adding #s 0-9 to list.\n");
+  printf("Expected: [ 9 8 7 6 5 4 3 2 1 0 ] \n");
 
   for (int i = 0; i < 10; i++) {
     struct node *node;
@@ -72,6 +72,11 @@ int main() {
   printf("Current list --> ");
   print_list(p);
   print_list(remove_node(p, 7));
+  printf("---------\n");
+
+  printf("Freeing list.\n");
+  printf("Expected: [ ]\n");
+  free_list(third);
   printf("---------\n");
 
 }
